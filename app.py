@@ -8,7 +8,9 @@ from langchain_text_splitters import RecursiveCharacterTextSplitter
 
 # from langchain.vectorstores import FAISS
 from langchain_community.vectorstores import FAISS
-from langchain.prompts import PromptTemplate
+# from langchain.prompts import PromptTemplate
+from langchain_core.prompts import PromptTemplate, ChatPromptTemplate
+
 from langchain_core.output_parsers import StrOutputParser
 import os, tempfile, streamlit as st
 from dotenv import load_dotenv
@@ -112,5 +114,6 @@ Resume Content: {resume_content}
 
     st.subheader("Match Score Result")
     st.write(result)
+
 
 
