@@ -64,7 +64,7 @@ if button:
                         "alignment with the job description.") if suggestions == "Yes" else "No suggestions requested."
 
     # get the top-k documents for the job description
-    retrieved_docs = retriever.get_relevant_documents(description)
+    retrieved_docs = retriever.invoke(description)
     # join retrieved docs into a single resume_content string (you can keep doc separators)
     resume_content = "\n\n---\n\n".join([d.page_content for d in retrieved_docs])
 
@@ -114,6 +114,7 @@ Resume Content: {resume_content}
 
     st.subheader("Match Score Result")
     st.write(result)
+
 
 
 
