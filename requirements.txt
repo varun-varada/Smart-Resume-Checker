@@ -8,7 +8,8 @@ sentence-transformers
 chromadb        # lightweight cross-platform vector DB (preferred on Streamlit Cloud)
 pymupdf
 langchain_text_splitters
-
+faiss-cpu
 python-dotenv
+
 
 
